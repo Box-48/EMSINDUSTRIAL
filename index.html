@@ -9,7 +9,10 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
 <body>
-
+      <div class="language-switcher">
+          <a href="index.html">ES</a> | <a href="index-en.html">EN</a>
+        </div>
+      
   <header id="main-header">
     <div class="header-content">
       <div class="logo-container">
@@ -33,97 +36,103 @@
     </div>
   </header>
 
-  <main>
-    <section id="inicio" class="hero" data-aos="fade-in">
-      <div class="overlay"></div>
-      <div class="hero-content">
-        <h2>Soluciones industriales que inspiran confianza</h2>
-        <p>Calidad, innovación y compromiso en cada proyecto.</p>
+  <section class="hero" id="inicio" data-aos="fade-down">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h2>SOLUCIONES INDUSTRIALES QUE INSPIRAN CONFIANZA</h2>
+      <p>Calidad, innovación y compromiso en cada proyecto.</p>
+    </div>
+  </section>
+
+  <section id="nosotros" data-aos="fade-up">
+    <h2>Nosotros</h2>
+    <p>Somos EMSINDUSTRIAL, una empresa dedicada a soluciones técnicas y mantenimiento industrial con alta precisión y confiabilidad.</p>
+  </section>
+
+  <section id="trabajos" data-aos="zoom-in-up">
+    <h2>Trabajos</h2>
+    <div class="trabajos-grid">
+      <div class="trabajo-item">
+        <img src="assets/images/trabajo1.jpg" alt="Trabajo 1" />
+        <p>En este proyecto realizamos una instalación eléctrica industrial con estándares de alta eficiencia energética. 
+        La precisión en el montaje garantizó una ejecución sin fallas desde el primer encendido.</p>
+        <p>Además, se aplicaron técnicas de cableado estructurado para un mantenimiento más seguro y ágil en el futuro. 
+        El cliente quedó altamente satisfecho con la entrega final.</p>
       </div>
-    </section>
-
-    <section id="nosotros" data-aos="fade-up">
-      <h2>Nosotros</h2>
-      <p>Somos EMSINDUSTRIAL, una empresa dedicada a soluciones técnicas y mantenimiento industrial con alta precisión y confiabilidad.</p>
-    </section>
-
-    <section id="trabajos" data-aos="fade-up">
-      <h2>Nuestros Trabajos</h2>
-      <div class="trabajos-grid">
-        <div class="trabajo-item">
-          <img src="assets/images/trabajo1.jpg" alt="Trabajo 1">
-          <p>Realizamos una instalación profesional de equipos de refrigeración de última generación para el restaurante NYAM. El acabado en acero inoxidable garantiza durabilidad y estética premium.</p>
-          <p>El cliente quedó sumamente satisfecho con la eficiencia del sistema y la rapidez en la entrega. Este proyecto reafirma nuestro compromiso con la excelencia técnica.</p>
-        </div>
-        <div class="trabajo-item">
-          <img src="assets/images/trabajo2.jpg" alt="Trabajo 2">
-          <p>Diseñamos e instalamos un buffet moderno y resistente en granito para el área de colaboradores de hotel. El mobiliario combina funcionalidad con un acabado elegante.</p>
-          <p>Se integraron conexiones eléctricas internas para facilitar el uso de equipos. Otro proyecto exitoso donde EMSI demuestra su versatilidad.</p>
-        </div>
-        <div class="trabajo-item">
-          <img src="assets/images/trabajo3.jpg" alt="Trabajo 3">
-          <p>Montaje completo de estación de cocina industrial con extractor tipo campana. Una solución integral para servir con eficiencia y diseño.</p>
-          <p>El espacio fue optimizado para mantener limpieza, orden y flujo continuo de trabajo. Aportamos soluciones adaptadas al entorno del cliente.</p>
-        </div>
-        <div class="trabajo-item">
-          <img src="assets/images/trabajo4.jpg" alt="Trabajo 4">
-          <p>Instalación de cámara fría y congelador para restaurante-bar. Todo el sistema fue calibrado para temperaturas ideales.</p>
-          <p>Desde los paneles hasta la unidad exterior, cada detalle fue supervisado. Un resultado funcional y profesional con sello EMSINDUSTRIAL.</p>
-        </div>
-        <div class="trabajo-item">
-          <video controls src="assets/videos/trabajo1.mp4"></video>
-          <p>En este video puedes ver el proceso de conexión, pruebas y puesta en marcha de un sistema de refrigeración en tiempo real para un restaurante en Jamaica.</p>
-          <p>Todo fue documentado como parte de nuestro compromiso con la transparencia y la calidad de cada paso del proyecto.</p>
-        </div>
-        <div class="trabajo-item">
-          <video controls src="assets/videos/trabajo2.mp4"></video>
-          <p>Este segundo video muestra la instalación finalizada y en funcionamiento del buffet caliente con estructura en acero inoxidable.</p>
-          <p>La satisfacción del cliente quedó registrada no solo en su testimonio, sino en la durabilidad que cada componente refleja en el video.</p>
-        </div>
+      <div class="trabajo-item">
+        <img src="assets/images/trabajo2.jpg" alt="Trabajo 2" />
+        <p>Diseñamos y ejecutamos un sistema de automatización para control de motores con interfaz programable. 
+        Este trabajo permitió a la empresa cliente reducir su consumo y aumentar la productividad.</p>
+        <p>Los sensores industriales integrados aseguraron una respuesta rápida y precisa en todo el proceso. 
+        Todo fue probado bajo escenarios reales de operación.</p>
       </div>
-    </section>
+      <div class="trabajo-item">
+        <img src="assets/images/trabajo3.jpg" alt="Trabajo 3" />
+        <p>Se realizó mantenimiento predictivo en maquinaria crítica del área de producción, 
+        utilizando tecnología de escaneo térmico y análisis de vibración para evitar fallos.</p>
+        <p>El resultado fue un aumento considerable en el tiempo útil de los equipos y una reducción significativa en el tiempo de parada.</p>
+      </div>
+      <div class="trabajo-item">
+        <img src="assets/images/trabajo4.jpg" alt="Trabajo 4" />
+        <p>Este proyecto consistió en la instalación y calibración de un sistema de climatización industrial de gran escala. 
+        La eficiencia energética fue clave en todo el diseño.</p>
+        <p>Se logró mantener una temperatura óptima de forma automatizada, adaptándose dinámicamente a la carga térmica del entorno.</p>
+      </div>
+      <div class="trabajo-item">
+        <video src="assets/videos/trabajo1.mp4" controls></video>
+        <p>En este video mostramos la implementación paso a paso de un sistema de bombeo inteligente. 
+        Se utilizaron válvulas electrónicas y sensores de nivel que permiten una operación 100% automática.</p>
+        <p>Ideal para sistemas de riego o distribución de agua industrial, este sistema está diseñado para minimizar consumo y errores humanos.</p>
+      </div>
+      <div class="trabajo-item">
+        <video src="assets/videos/trabajo2.mp4" controls></video>
+        <p>Observa en acción nuestra solución de control de acceso industrial con lector biométrico y sistema centralizado. 
+        Ideal para áreas restringidas en fábricas y almacenes.</p>
+        <p>En el video se destaca la facilidad de uso y la seguridad que ofrece este sistema, adaptable a cualquier infraestructura.</p>
+      </div>
+    </div>
+  </section>
 
-    <section id="equipos" data-aos="zoom-in">
-      <h2>Tecnología</h2>
-      <ul>
-        <li>Termografía industrial</li>
-        <li>Multímetros de precisión</li>
-        <li>Detectores de fuga ultrasónicos</li>
-        <li>Herramientas de diagnóstico eléctrico</li>
-      </ul>
-    </section>
+  <section id="equipos" data-aos="flip-left">
+    <h2>Tecnología</h2>
+    <p>Trabajamos con herramientas y tecnologías avanzadas para garantizar resultados eficientes.</p>
+  </section>
 
-    <section id="contacto" data-aos="fade-up" class="contact-section">
-      <div class="overlay"></div>
-      <h2>Contáctanos</h2>
-      <form id="formulario">
-        <div class="form-group">
-          <input type="text" name="nombre" placeholder="Tu nombre" required />
-        </div>
-        <div class="form-group">
-          <input type="email" name="email" placeholder="Tu correo" required />
-        </div>
-        <div class="form-group">
-          <textarea name="mensaje" placeholder="Tu mensaje" required></textarea>
-        </div>
-        <button type="submit" class="btn-animado">Enviar</button>
-        <p id="mensaje-exito" style="display: none; color: lightgreen; margin-top: 10px;">¡Mensaje enviado con éxito!</p>
-      </form>
-    </section>
-  </main>
+  <section id="contacto" data-aos="fade-left" class="contact-section">
+    <div class="overlay"></div>
+    <h2>Contáctanos</h2>
+    <form id="formulario">
+      <div class="form-group">
+        <label for="nombre">Tu nombre</label>
+        <input type="text" name="nombre" required />
+      </div>
+      <div class="form-group">
+        <label for="correo">Tu correo</label>
+        <input type="email" name="correo" required />
+      </div>
+      <div class="form-group">
+        <label for="mensaje">Tu mensaje</label>
+        <textarea name="mensaje" required></textarea>
+      </div>
+      <button type="submit" class="btn-animado">Enviar</button>
+    </form>
+  </section>
 
   <footer>
-    <p>&copy; 2025 EMSINDUSTRIAL. Todos los derechos reservados.</p>
+    <p>© EMSINDUSTRIAL - Todos los derechos reservados</p>
   </footer>
 
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-  <script>
-    emailjs.init('BdsdjzCseTeNHFiUQ');
-  </script>
+  <script> emailjs.init('BdsdjzCseTeNHFiUQ'); </script>
   <script src="script.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init();
+    AOS.init({
+      duration: 1000,
+      once: true,
+      offset: 150
+    });
   </script>
 </body>
 </html>

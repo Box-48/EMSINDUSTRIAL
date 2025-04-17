@@ -1,4 +1,4 @@
-/* === RESET === */
+/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -7,393 +7,58 @@
   
   html {
     scroll-padding-top: 160px;
+    scroll-behavior: smooth;
   }
   
   body {
     font-family: 'Rubik', sans-serif;
-    scroll-behavior: smooth;
     background: #f4f4f4;
     color: #333;
   }
   
-  /* === HEADER === */
+  /* Header */
   header {
     position: fixed;
-    top: 0;
     width: 100%;
-    background-color: #222;
-    color: #fff;
+    top: 0;
+    background: #222;
+    color: white;
     padding: 20px 0;
-    z-index: 1000;
+    z-index: 999;
+    transition: all 0.3s ease;
   }
   
   .header-content {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    position: relative;
   }
   
   .logo-container {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
   }
   
   .logo-container img {
     height: 50px;
-    width: auto;
-  }
-  
-  header h1 {
-    font-size: 2.2em;
-    font-weight: bold;
-    letter-spacing: 1px;
   }
   
   nav ul {
     display: flex;
     list-style: none;
-    gap: 2em;
+    gap: 2rem;
   }
   
   nav ul li a {
     color: white;
     text-decoration: none;
-    font-weight: 500;
-  }
-  
-  /* === MAIN === */
-  main {
-    margin-top: 160px;
-  }
-  
-  section {
-    padding: 60px 20px;
-    max-width: 1000px;
-    margin: auto;
     position: relative;
-  }
-  
-  .hero {
-    background: url('assets/images/fondo-industrial.jpg') no-repeat center center/cover;
-    color: white;
-    height: 60vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .hero-content {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    max-width: 800px;
-    padding: 0 20px;
-  }
-  
-  .hero-content h2 {
-    font-size: 3em;
-    margin-bottom: 0.5em;
-    animation: fadeInUp 1.2s ease-in-out;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
-  }
-  
-  .hero-content p {
-    font-size: 1.3em;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-  }
-  
-  /* === CONTACTO === */
-  .contact-section {
-    background: url('assets/images/fondo-industrial.jpg') no-repeat center center/cover;
-    color: white;
-    overflow: hidden;
-  }
-  
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-  }
-  
-  .hero-content,
-  .contact-section > h2,
-  #formulario {
-    position: relative;
-    z-index: 2;
-  }
-  
-  .carousel {
-    display: flex;
-    gap: 15px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-  }
-  
-  .carousel img,
-  .carousel video {
-    flex: 0 0 auto;
-    width: 300px;
-    border-radius: 10px;
-    scroll-snap-align: center;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-  }
-  
-  #formulario {
-    max-width: 600px;
-    margin: auto;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 30px;
-    border-radius: 10px;
-  }
-  
-  .form-group {
-    margin-bottom: 20px;
-  }
-  
-  #formulario input,
-  #formulario textarea {
-    width: 100%;
-    padding: 15px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1em;
-  }
-  
-  #formulario textarea {
-    resize: vertical;
-    min-height: 100px;
-  }
-  
-  .btn-animado {
-    background-color: #ff6600;
-    color: #fff;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-  }
-  
-  .btn-animado:hover {
-    background-color: #e65c00;
-    transform: scale(1.05);
-  }
-  
-  .btn-animado:active {
-    transform: scale(0.95);
-  }
-  
-  footer {
-    background: #222;
-    color: white;
-    text-align: center;
-    padding: 20px;
-  }
-  
-  /* === TÍTULOS === */
-  section h2 {
-    font-size: 2.5em;
-    text-align: left;
-    margin-bottom: 20px;
-    color: #000;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    position: relative;
-    padding-bottom: 10px;
-  }
-  
-  section h2::after {
-    content: '';
-    display: block;
-    width: 80px;
-    height: 4px;
-    background: #000;
-    margin-top: 10px;
-    border-radius: 2px;
-    transform: scaleX(0);
-    transform-origin: left;
-    animation: expandLine 1s forwards;
-  }
-  
-  #inicio h2::after {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  #inicio h2,
-  #contacto h2 {
-    color: #fff;
-  }
-  
-  #inicio h2::after,
-  #contacto h2::after {
-    background: #fff;
-  }
-  
-  /* === ANIMACIONES === */
-  @keyframes fadeInUp {
-    0% { transform: translateY(40px); opacity: 0; }
-    100% { transform: translateY(0); opacity: 1; }
-  }
-  
-  @keyframes expandLine {
-    to {
-      transform: scaleX(1);
-    }
-  }
-  
-  /* === RESPONSIVE === */
-  @media (max-width: 768px) {
-    .header-content {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .logo-container {
-      flex-direction: row;
-      justify-content: center;
-      gap: 10px;
-    }
-  
-    header h1 {
-      font-size: 1.6em;
-      text-align: center;
-    }
-  
-    nav ul {
-      flex-direction: column;
-      gap: 10px;
-      align-items: center;
-      margin-top: 10px;
-    }
-  
-    .hero {
-      height: auto;
-      padding: 60px 20px;
-    }
-  
-    .hero-content h2 {
-      font-size: 2em;
-    }
-  
-    .hero-content p {
-      font-size: 1em;
-    }
-  
-    section h2 {
-      font-size: 1.8em;
-      text-align: center;
-    }
-  
-    section h2::after {
-      margin-left: auto;
-      margin-right: auto;
-    }
-  
-    .carousel img,
-    .carousel video {
-      width: 100%;
-    }
-  
-    #formulario {
-      padding: 20px;
-    }
-  
-    .btn-animado {
-      width: 100%;
-      padding: 15px;
-    }
-  
-    footer {
-      font-size: 0.9em;
-    }
-  }
-  .trabajos-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    margin-top: 30px;
-  }
-  
-  .trabajo-item {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-  }
-  
-  .trabajo-item:hover {
-    transform: translateY(-5px);
-  }
-  
-  .trabajo-item img,
-  .trabajo-item video {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 15px;
-  }
-  
-  .trabajo-item p {
-    margin-bottom: 10px;
-    line-height: 1.6;
-    font-size: 0.95em;
-  }
-
-  /* ==== HAMBURGUESA ==== */
-.menu-toggle {
-    display: none;
-    font-size: 2rem;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-  }
-  
-  @media (max-width: 768px) {
-    .menu-toggle {
-      display: block;
-    }
-  
-    #nav-menu {
-      display: none;
-      flex-direction: column;
-      gap: 10px;
-      text-align: center;
-      margin-top: 10px;
-    }
-  
-    #nav-menu.show {
-      display: flex;
-    }
-  
-    .header-content {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    nav ul {
-      flex-direction: column;
-    }
-  }
-  
-  /* ==== HOVER EFFECT ==== */
-  nav ul li a {
-    position: relative;
-    transition: color 0.3s;
+    transition: color 0.3s ease;
   }
   
   nav ul li a:hover {
@@ -403,10 +68,10 @@
   nav ul li a::after {
     content: '';
     display: block;
-    width: 0;
     height: 2px;
     background: #ff6600;
-    transition: width 0.3s;
+    width: 0%;
+    transition: width 0.3s ease;
     position: absolute;
     bottom: -5px;
     left: 0;
@@ -416,14 +81,282 @@
     width: 100%;
   }
   
-  /* ==== STICKY ANIMADO ==== */
+  /* Sticky header shrink */
   #main-header.shrink {
     padding: 10px 0;
     background-color: #111;
-    transition: all 0.3s ease;
   }
   
   #main-header.shrink h1 {
     font-size: 1.5em;
+  }
+  
+  /* Language switch */
+  .language-switcher {
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    font-size: 0.95em;
+    z-index: 1001;
+  }
+  
+  .language-switcher a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 5px;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .language-switcher a:hover {
+    color: #ff6600;
+  }
+  
+  /* Hero actualizado */
+  .hero {
+    padding: 120px 20px 60px;
+    background: url('assets/images/fondo-industrial.jpg') center center/cover no-repeat;
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .hero-content h2 {
+    font-size: 3em;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    border-bottom: 3px solid white;
+    display: inline-block;
+    padding-bottom: 10px;
+  }
+  
+  .hero-content p {
+    font-size: 1.2em;
+    color: white;
+  }
+  
+  /* Secciones */
+  section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: auto;
+    animation: fadeInUp 0.9s ease forwards;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  
+  section[data-aos] {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.8s ease;
+  }
+  
+  section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-bottom: 10px;
+    text-align: left;
+    color: black;
+    position: relative;
+    animation: fadeInUp 1s ease both;
+  }
+  
+  /* Trabajos */
+  .trabajos-grid {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  
+  .trabajo-item img,
+  .trabajo-item video {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+  
+  .trabajo-item img:hover,
+  .trabajo-item video:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Contacto */
+  .contact-section {
+    position: relative;
+    color: white;
+    background: url('assets/images/fondo-industrial.jpg') center center/cover no-repeat;
+    z-index: 0;
+  }
+  
+  .contact-section .overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  
+  .contact-section h2,
+  .contact-section p,
+  .contact-section label,
+  .contact-section input,
+  .contact-section textarea {
+    color: white;
+    position: relative;
+    z-index: 2;
+  }
+  
+  form {
+    max-width: 600px;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1em;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    transition: all 0.3s ease;
+  }
+  
+  input:hover,
+  textarea:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(255, 102, 0, 0.6);
+    transform: scale(1.03);
+  }
+  
+  /* Botón animado */
+  .btn-animado {
+    background-color: #ff6600;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .btn-animado::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: left 0.3s ease;
+  }
+  
+  .btn-animado:hover::after {
+    left: 100%;
+  }
+  
+  .btn-animado:hover {
+    background-color: #e65c00;
+    transform: scale(1.05);
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: white;
+    font-size: 0.9em;
+  }
+  
+  /* Animaciones */
+  @keyframes fadeInUp {
+    from {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Responsive */
+  .menu-toggle {
+    display: none;
+  }
+  
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
+    }
+  
+    nav {
+      display: none;
+      width: 100%;
+    }
+  
+    nav.show {
+      display: block;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      margin-top: 10px;
+    }
+  
+    .header-content {
+      flex-direction: column;
+    }
+  
+    .language-switcher {
+      position: static;
+      margin-top: 10px;
+    }
   }
   

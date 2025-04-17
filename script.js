@@ -1,16 +1,17 @@
-// 📌 Menú hamburguesa
+// Menu hamburguesa
 document.getElementById("menu-toggle").addEventListener("click", function () {
-    document.getElementById("nav-menu").classList.toggle("show");
+    const navMenu = document.getElementById("nav-menu");
+    navMenu.classList.toggle("show");
   });
   
-  // 📌 Header sticky animado al hacer scroll
+  // Header sticky animado
   window.addEventListener("scroll", function () {
     const header = document.getElementById("main-header");
     header.classList.toggle("shrink", window.scrollY > 50);
   });
   
-  // 📌 EmailJS (ya incluido antes)
-  document.getElementById("formulario").addEventListener("submit", function (e) {
+  // Envío de formulario con EmailJS
+  document.getElementById("formulario")?.addEventListener("submit", function (e) {
     e.preventDefault();
   
     const nombre = this.nombre.value.trim();
@@ -23,14 +24,14 @@ document.getElementById("menu-toggle").addEventListener("click", function () {
     }
   
     emailjs.send("service_8f7qmut", "template_sgbvqv9", {
-      nombre: nombre,
-      email: email,
-      mensaje: mensaje
-    }).then(function () {
+      nombre,
+      email,
+      mensaje,
+    }).then(() => {
       document.getElementById("mensaje-exito").style.display = "block";
-      document.getElementById("formulario").reset();
-    }, function (error) {
-      console.error("Error al enviar:", error);
+      this.reset();
+    }).catch((error) => {
+      console.error("Error:", error);
       alert("Hubo un error al enviar el mensaje.");
     });
   });

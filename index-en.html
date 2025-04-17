@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EMSINDUSTRIAL</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="language-switcher">
+      <a href="index.html">ES</a> | <a href="index-en.html">EN</a>
+    </div>
+  
+  <header id="main-header">
+    <div class="header-content">
+      <div class="logo-container">
+        <a href="#home">
+          <img src="assets/images/logo.png" alt="EMSINDUSTRIAL Logo" />
+        </a>
+        <h1>EMSI INDUSTRIAL</h1>
+      </div>
+
+      <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+
+      <nav id="nav-menu">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#works">Our Work</a></li>
+          <li><a href="#tech">Technology</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="home" data-aos="fade-down">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h2>INDUSTRIAL SOLUTIONS THAT INSPIRE TRUST</h2>
+      <p>Quality, innovation, and commitment in every project.</p>
+    </div>
+  </section>
+
+  <section id="about" data-aos="fade-up">
+    <h2>About Us</h2>
+    <p>We are EMSINDUSTRIAL, a company focused on technical solutions and industrial maintenance with high precision and reliability.</p>
+  </section>
+
+  <section id="works" data-aos="zoom-in-up">
+    <h2>Our Work</h2>
+    <div class="trabajos-grid">
+      <div class="trabajo-item">
+        <img src="assets/images/trabajo1.jpg" alt="Work 1" />
+        <p>This project involved an industrial electrical installation with high energy efficiency standards.
+        The precision in assembly ensured flawless execution from the first power-on.</p>
+        <p>Structured cabling techniques were applied for easier and safer future maintenance. 
+        The client was extremely satisfied with the result.</p>
+      </div>
+      <div class="trabajo-item">
+        <img src="assets/images/trabajo2.jpg" alt="Work 2" />
+        <p>We designed and implemented an automation system to control motors with a programmable interface. 
+        This helped the client reduce energy usage and improve productivity.</p>
+        <p>Integrated industrial sensors ensured fast and accurate responses during operation.
+        The system was tested under real-world conditions.</p>
+      </div>
+      <div class="trabajo-item">
+        <img src="assets/images/trabajo3.jpg" alt="Work 3" />
+        <p>Predictive maintenance was performed on critical production equipment,
+        using thermal scanning and vibration analysis to avoid failures.</p>
+        <p>The result was a significant increase in uptime and reduced equipment downtime.</p>
+      </div>
+      <div class="trabajo-item">
+        <img src="assets/images/trabajo4.jpg" alt="Work 4" />
+        <p>This project included the installation and calibration of a large-scale industrial HVAC system.
+        Energy efficiency was the main focus of the entire design.</p>
+        <p>It maintains optimal temperature automatically, adapting to the thermal load dynamically.</p>
+      </div>
+      <div class="trabajo-item">
+        <video src="assets/videos/trabajo1.mp4" controls></video>
+        <p>This video shows step-by-step the implementation of a smart pumping system.
+        It uses electronic valves and level sensors for 100% automated operation.</p>
+        <p>Perfect for irrigation or water distribution, it's designed to minimize energy use and human errors.</p>
+      </div>
+      <div class="trabajo-item">
+        <video src="assets/videos/trabajo2.mp4" controls></video>
+        <p>Watch our industrial access control solution in action, using biometric scanners and a centralized system.
+        Ideal for restricted zones in factories and warehouses.</p>
+        <p>The video highlights ease of use and security, adaptable to any infrastructure.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="tech" data-aos="flip-left">
+    <h2>Technology</h2>
+    <p>We work with advanced tools and technologies to ensure efficient results.</p>
+  </section>
+
+  <section id="contact" data-aos="fade-left" class="contact-section">
+    <div class="overlay"></div>
+    <h2>Contact Us</h2>
+    <form id="formulario">
+      <div class="form-group">
+        <label for="nombre">Your name</label>
+        <input type="text" name="nombre" required />
+      </div>
+      <div class="form-group">
+        <label for="correo">Your email</label>
+        <input type="email" name="correo" required />
+      </div>
+      <div class="form-group">
+        <label for="mensaje">Your message</label>
+        <textarea name="mensaje" required></textarea>
+      </div>
+      <button type="submit" class="btn-animado">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© EMSINDUSTRIAL - All rights reserved</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script> emailjs.init('BdsdjzCseTeNHFiUQ'); </script>
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+      offset: 150
+    });
+  </script>
+</body>
+</html>
