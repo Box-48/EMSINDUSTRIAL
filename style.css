@@ -352,4 +352,78 @@
     line-height: 1.6;
     font-size: 0.95em;
   }
-    
+
+  /* ==== HAMBURGUESA ==== */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+  
+    #nav-menu {
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+      text-align: center;
+      margin-top: 10px;
+    }
+  
+    #nav-menu.show {
+      display: flex;
+    }
+  
+    .header-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    nav ul {
+      flex-direction: column;
+    }
+  }
+  
+  /* ==== HOVER EFFECT ==== */
+  nav ul li a {
+    position: relative;
+    transition: color 0.3s;
+  }
+  
+  nav ul li a:hover {
+    color: #ff6600;
+  }
+  
+  nav ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ff6600;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+  }
+  
+  nav ul li a:hover::after {
+    width: 100%;
+  }
+  
+  /* ==== STICKY ANIMADO ==== */
+  #main-header.shrink {
+    padding: 10px 0;
+    background-color: #111;
+    transition: all 0.3s ease;
+  }
+  
+  #main-header.shrink h1 {
+    font-size: 1.5em;
+  }
+  

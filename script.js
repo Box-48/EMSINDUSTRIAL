@@ -1,4 +1,16 @@
-document.getElementById("formulario").addEventListener("submit", function (e) {
+// 📌 Menú hamburguesa
+document.getElementById("menu-toggle").addEventListener("click", function () {
+    document.getElementById("nav-menu").classList.toggle("show");
+  });
+  
+  // 📌 Header sticky animado al hacer scroll
+  window.addEventListener("scroll", function () {
+    const header = document.getElementById("main-header");
+    header.classList.toggle("shrink", window.scrollY > 50);
+  });
+  
+  // 📌 EmailJS (ya incluido antes)
+  document.getElementById("formulario").addEventListener("submit", function (e) {
     e.preventDefault();
   
     const nombre = this.nombre.value.trim();
