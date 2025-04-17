@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EMSINDUSTRIAL</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+</head>
+<body>
+
+  <header>
+    <h1>EMSINDUSTRIAL</h1>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#trabajos">Trabajos</a></li>
+        <li><a href="#equipos">Tecnología</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero" data-aos="fade-in">
+      <div class="overlay"></div>
+      <div class="hero-content">
+        <h2>Soluciones industriales que inspiran confianza</h2>
+        <p>Calidad, innovación y compromiso en cada proyecto.</p>
+      </div>
+    </section>
+
+    <section id="nosotros" data-aos="fade-up">
+      <h2>Nosotros</h2>
+      <p>Somos EMSINDUSTRIAL, una empresa dedicada a soluciones técnicas y mantenimiento industrial con alta precisión y confiabilidad.</p>
+    </section>
+
+    <section id="trabajos" data-aos="fade-right">
+      <h2>Nuestros Trabajos</h2>
+      <div class="carousel">
+        <img src="assets/images/trabajo1.jpg" alt="Trabajo 1">
+        <img src="assets/images/trabajo2.jpg" alt="Trabajo 2">
+        <video controls src="assets/videos/demo.mp4"></video>
+      </div>
+    </section>
+
+    <section id="equipos" data-aos="zoom-in">
+      <h2>Tecnología</h2>
+      <ul>
+        <li>Termografía industrial</li>
+        <li>Multímetros de precisión</li>
+        <li>Detectores de fuga ultrasónicos</li>
+        <li>Herramientas de diagnóstico eléctrico</li>
+      </ul>
+    </section>
+
+    <section id="contacto" data-aos="fade-up" class="contact-section">
+      <div class="overlay"></div>
+      <h2>Contáctanos</h2>
+      <form id="formulario">
+        <div class="form-group">
+          <input type="text" name="nombre" placeholder="Tu nombre" required />
+        </div>
+        <div class="form-group">
+          <input type="email" name="email" placeholder="Tu correo" required />
+        </div>
+        <div class="form-group">
+          <textarea name="mensaje" placeholder="Tu mensaje" required></textarea>
+        </div>
+        <button type="submit" class="btn-animado">Enviar</button>
+        <p id="mensaje-exito" style="display: none; color: lightgreen; margin-top: 10px;">¡Mensaje enviado con éxito!</p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 EMSINDUSTRIAL. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    emailjs.init('BdsdjzCseTeNHFiUQ');
+  </script>
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
