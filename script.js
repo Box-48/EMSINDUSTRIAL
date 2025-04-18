@@ -112,6 +112,12 @@ document.addEventListener('DOMContentLoaded', () => {
       if (texts[lang][key]) el.textContent = texts[lang][key];
     });
   }
+// Cierra el menú hamburguesa al hacer clic en un enlace
+document.querySelectorAll('#nav-menu a').forEach(link => {
+  link.addEventListener('click', () => {
+    document.getElementById('nav-menu').classList.remove('show');
+  });
+});
 
   document.getElementById('lang-es').addEventListener('click', () => setLanguage('es'));
   document.getElementById('lang-en').addEventListener('click', () => setLanguage('en'));
