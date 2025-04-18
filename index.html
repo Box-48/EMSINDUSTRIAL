@@ -9,28 +9,23 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
 <body>
-      <div class="language-switcher">
-          <a href="index.html">ES</a> | <a href="index-en.html">EN</a>
-        </div>
-      
+  <div class="language-switcher">
+    <a href="#" id="lang-es">ES</a> | <a href="#" id="lang-en">EN</a>
+  </div>
+
   <header id="main-header">
     <div class="header-content">
       <div class="logo-container">
-        <a href="#inicio">
-          <img src="assets/images/logo.png" alt="Logo EMSI" />
-        </a>
-        <h1>EMSI INDUSTRIAL</h1>
+        <img src="assets/images/logo.png" alt="EMSINDUSTRIAL Logo" />
       </div>
-
       <button class="menu-toggle" id="menu-toggle">&#9776;</button>
-
       <nav id="nav-menu">
         <ul>
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#nosotros">Nosotros</a></li>
-          <li><a href="#trabajos">Trabajos</a></li>
-          <li><a href="#equipos">Tecnología</a></li>
-          <li><a href="#contacto">Contacto</a></li>
+          <li><a href="#inicio" data-i18n="menu_inicio">Inicio</a></li>
+          <li><a href="#nosotros" data-i18n="menu_nosotros">Nosotros</a></li>
+          <li><a href="#trabajos" data-i18n="menu_trabajos">Trabajos</a></li>
+          <li><a href="#equipos" data-i18n="menu_equipos">Tecnología</a></li>
+          <li><a href="#contacto" data-i18n="menu_contacto">Contacto</a></li>
         </ul>
       </nav>
     </div>
@@ -39,100 +34,87 @@
   <section class="hero" id="inicio" data-aos="fade-down">
     <div class="overlay"></div>
     <div class="hero-content">
-      <h2>SOLUCIONES INDUSTRIALES QUE INSPIRAN CONFIANZA</h2>
-      <p>Calidad, innovación y compromiso en cada proyecto.</p>
+      <h2 data-i18n="hero_titulo">SOLUCIONES INDUSTRIALES QUE INSPIRAN CONFIANZA</h2>
+      <p data-i18n="hero_texto">Calidad, innovación y compromiso en cada proyecto.</p>
     </div>
   </section>
 
   <section id="nosotros" data-aos="fade-up">
-    <h2>Nosotros</h2>
-    <p>Somos EMSINDUSTRIAL, una empresa dedicada a soluciones técnicas y mantenimiento industrial con alta precisión y confiabilidad.</p>
+    <h2 data-i18n="nosotros_titulo">Nosotros</h2>
+    <p data-i18n="nosotros_texto">Somos EMSINDUSTRIAL, una empresa dedicada a soluciones técnicas y mantenimiento industrial con alta precisión y confiabilidad.</p>
   </section>
 
   <section id="trabajos" data-aos="zoom-in-up">
-    <h2>Trabajos</h2>
+    <h2 data-i18n="trabajos_titulo">Trabajos</h2>
     <div class="trabajos-grid">
       <div class="trabajo-item">
         <img src="assets/images/trabajo1.jpg" alt="Trabajo 1" />
-        <p>En este proyecto realizamos una instalación eléctrica industrial con estándares de alta eficiencia energética. 
-        La precisión en el montaje garantizó una ejecución sin fallas desde el primer encendido.</p>
-        <p>Además, se aplicaron técnicas de cableado estructurado para un mantenimiento más seguro y ágil en el futuro. 
-        El cliente quedó altamente satisfecho con la entrega final.</p>
+        <p data-i18n="trabajo1_p1">Instalamos un sistema eléctrico industrial de alta eficiencia energética.</p>
+        <p data-i18n="trabajo1_p2">Aplicamos técnicas de cableado estructurado para facilitar el mantenimiento.</p>
       </div>
       <div class="trabajo-item">
         <img src="assets/images/trabajo2.jpg" alt="Trabajo 2" />
-        <p>Diseñamos y ejecutamos un sistema de automatización para control de motores con interfaz programable. 
-        Este trabajo permitió a la empresa cliente reducir su consumo y aumentar la productividad.</p>
-        <p>Los sensores industriales integrados aseguraron una respuesta rápida y precisa en todo el proceso. 
-        Todo fue probado bajo escenarios reales de operación.</p>
+        <p data-i18n="trabajo2_p1">Diseñamos un sistema de automatización con control de motores.</p>
+        <p data-i18n="trabajo2_p2">Los sensores industriales garantizaron una operación segura.</p>
       </div>
       <div class="trabajo-item">
         <img src="assets/images/trabajo3.jpg" alt="Trabajo 3" />
-        <p>Se realizó mantenimiento predictivo en maquinaria crítica del área de producción, 
-        utilizando tecnología de escaneo térmico y análisis de vibración para evitar fallos.</p>
-        <p>El resultado fue un aumento considerable en el tiempo útil de los equipos y una reducción significativa en el tiempo de parada.</p>
+        <p data-i18n="trabajo3_p1">Realizamos mantenimiento predictivo con escaneo térmico.</p>
+        <p data-i18n="trabajo3_p2">Aumentamos el tiempo de actividad de la maquinaria crítica.</p>
       </div>
       <div class="trabajo-item">
         <img src="assets/images/trabajo4.jpg" alt="Trabajo 4" />
-        <p>Este proyecto consistió en la instalación y calibración de un sistema de climatización industrial de gran escala. 
-        La eficiencia energética fue clave en todo el diseño.</p>
-        <p>Se logró mantener una temperatura óptima de forma automatizada, adaptándose dinámicamente a la carga térmica del entorno.</p>
+        <p data-i18n="trabajo4_p1">Instalamos un sistema de climatización industrial eficiente.</p>
+        <p data-i18n="trabajo4_p2">El sistema se ajusta automáticamente a la carga térmica.</p>
       </div>
       <div class="trabajo-item">
         <video src="assets/videos/trabajo1.mp4" controls></video>
-        <p>En este video mostramos la implementación paso a paso de un sistema de bombeo inteligente. 
-        Se utilizaron válvulas electrónicas y sensores de nivel que permiten una operación 100% automática.</p>
-        <p>Ideal para sistemas de riego o distribución de agua industrial, este sistema está diseñado para minimizar consumo y errores humanos.</p>
+        <p data-i18n="video1_p1">Este video muestra un sistema de bombeo inteligente.</p>
+        <p data-i18n="video1_p2">Perfecto para riego o distribución de agua industrial.</p>
       </div>
       <div class="trabajo-item">
         <video src="assets/videos/trabajo2.mp4" controls></video>
-        <p>Observa en acción nuestra solución de control de acceso industrial con lector biométrico y sistema centralizado. 
-        Ideal para áreas restringidas en fábricas y almacenes.</p>
-        <p>En el video se destaca la facilidad de uso y la seguridad que ofrece este sistema, adaptable a cualquier infraestructura.</p>
+        <p data-i18n="video2_p1">Sistema de control de acceso con escáner biométrico.</p>
+        <p data-i18n="video2_p2">Adaptable y seguro para zonas restringidas industriales.</p>
       </div>
     </div>
   </section>
 
   <section id="equipos" data-aos="flip-left">
-    <h2>Tecnología</h2>
-    <p>Trabajamos con herramientas y tecnologías avanzadas para garantizar resultados eficientes.</p>
+    <h2 data-i18n="equipos_titulo">Tecnología</h2>
+    <p data-i18n="equipos_texto">Trabajamos con herramientas y tecnologías avanzadas para garantizar resultados eficientes.</p>
   </section>
 
   <section id="contacto" data-aos="fade-left" class="contact-section">
     <div class="overlay"></div>
-    <h2>Contáctanos</h2>
+    <h2 data-i18n="contacto_titulo">Contáctanos</h2>
     <form id="formulario">
       <div class="form-group">
-        <label for="nombre">Tu nombre</label>
+        <label for="nombre" data-i18n="label_nombre">NOMBRE:</label>
         <input type="text" name="nombre" required />
       </div>
       <div class="form-group">
-        <label for="correo">Tu correo</label>
-        <input type="email" name="correo" required />
+        <label for="user_email" data-i18n="label_correo">CORREO:</label>
+        <input type="email" name="email" required />
       </div>
       <div class="form-group">
-        <label for="mensaje">Tu mensaje</label>
+        <label for="mensaje" data-i18n="label_mensaje">MENSAJE:</label>
         <textarea name="mensaje" required></textarea>
       </div>
-      <button type="submit" class="btn-animado">Enviar</button>
+      <button type="submit" class="btn-animado" data-i18n="btn_enviar">Enviar</button>
     </form>
+    <div id="mensaje-exito" style="text-align:center; margin-top:15px; font-weight:bold; z-index:3; position:relative;"></div>
   </section>
 
   <footer>
-    <p>© EMSINDUSTRIAL - Todos los derechos reservados</p>
+    <p>© EMSINDUSTRIAL - <span data-i18n="footer_texto">Todos los derechos reservados</span></p>
   </footer>
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-  <script> emailjs.init('BdsdjzCseTeNHFiUQ'); </script>
+  <script>emailjs.init('BdsdjzCseTeNHFiUQ');</script>
   <script src="script.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 1000,
-      once: true,
-      offset: 150
-    });
-  </script>
+  <script>AOS.init({ duration: 1000, once: true, offset: 150 });</script>
 </body>
 </html>
