@@ -347,7 +347,11 @@
       color: white;
       cursor: pointer;
     }
-  
+  .logo-container {
+  justify-content: center;
+  width: 100%;
+}
+
     nav {
       display: none;
       width: 100%;
