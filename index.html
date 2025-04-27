@@ -31,91 +31,123 @@
   </div>
 </header>
 
+<section class="hero" id="inicio" data-aos="fade-down">
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <h2 data-i18n="hero_titulo">SOLUCIONES INDUSTRIALES QUE INSPIRAN CONFIANZA</h2>
+    <p data-i18n="hero_texto">Calidad, innovación y compromiso en cada proyecto.</p>
+  </div>
+</section>
 
-  <section class="hero" id="inicio" data-aos="fade-down">
-    <div class="overlay"></div>
-    <div class="hero-content">
-      <h2 data-i18n="hero_titulo">SOLUCIONES INDUSTRIALES QUE INSPIRAN CONFIANZA</h2>
-      <p data-i18n="hero_texto">Calidad, innovación y compromiso en cada proyecto.</p>
+<section id="nosotros" data-aos="fade-up">
+  <h2 data-i18n="nosotros_titulo">Nosotros</h2>
+  <p data-i18n="nosotros_texto">Somos EMSINDUSTRIAL, una empresa dedicada a soluciones técnicas y mantenimiento industrial con alta precisión y confiabilidad.</p>
+</section>
+
+<!-- 🔥 SECCIÓN DE TRABAJOS ACTUALIZADA 🔥 -->
+<section id="trabajos" data-aos="zoom-in-up">
+  <h2 data-i18n="trabajos_titulo">Trabajos</h2>
+
+  <style>
+    .galeria-publica {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .galeria-item {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 10px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .galeria-item:hover {
+      transform: scale(1.03);
+    }
+    .galeria-item img, .galeria-item video {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .descripcion {
+      font-size: 14px;
+      color: #555;
+      margin-top: 8px;
+    }
+  </style>
+
+  <div class="galeria-publica">
+    <?php
+    $carpeta = 'uploads/';
+    if (is_dir($carpeta)) {
+      $archivos = array_diff(scandir($carpeta), array('.', '..'));
+      foreach ($archivos as $archivo) {
+        if (pathinfo($archivo, PATHINFO_EXTENSION) == 'txt') continue;
+        $ruta = $carpeta . $archivo;
+        $tipo = mime_content_type($ruta);
+
+        echo '<div class="galeria-item">';
+        if (strpos($tipo, 'image') !== false) {
+          echo '<img src="'.$ruta.'" alt="Imagen">';
+        } elseif (strpos($tipo, 'video') !== false) {
+          echo '<video src="'.$ruta.'" controls></video>';
+        }
+
+        if (file_exists($ruta . '.txt')) {
+          $descripcion = file_get_contents($ruta . '.txt');
+          echo '<p class="descripcion">'.htmlspecialchars($descripcion).'</p>';
+        }
+
+        echo '</div>';
+      }
+    } else {
+      echo "<p>No hay archivos subidos todavía.</p>";
+    }
+    ?>
+  </div>
+
+</section>
+
+<section id="equipos" data-aos="flip-left">
+  <h2 data-i18n="equipos_titulo">Tecnología</h2>
+  <p data-i18n="equipos_texto">Trabajamos con herramientas y tecnologías avanzadas para garantizar resultados eficientes.</p>
+</section>
+
+<section id="contacto" data-aos="fade-left" class="contact-section">
+  <div class="overlay"></div>
+  <h2 data-i18n="contacto_titulo">Contáctanos</h2>
+  <form id="formulario">
+    <div class="form-group">
+      <label for="nombre" data-i18n="label_nombre">NOMBRE:</label>
+      <input type="text" name="nombre" required />
     </div>
-  </section>
-
-  <section id="nosotros" data-aos="fade-up">
-    <h2 data-i18n="nosotros_titulo">Nosotros</h2>
-    <p data-i18n="nosotros_texto">Somos EMSINDUSTRIAL, una empresa dedicada a soluciones técnicas y mantenimiento industrial con alta precisión y confiabilidad.</p>
-  </section>
-
-  <section id="trabajos" data-aos="zoom-in-up">
-    <h2 data-i18n="trabajos_titulo">Trabajos</h2>
-    <div class="trabajos-grid">
-      <div class="trabajo-item">
-        <img src="assets/images/trabajo1.jpg" alt="Trabajo 1" />
-        <p data-i18n="trabajo1_p1">Instalamos un sistema eléctrico industrial de alta eficiencia energética.</p>
-        <p data-i18n="trabajo1_p2">Aplicamos técnicas de cableado estructurado para facilitar el mantenimiento.</p>
-      </div>
-      <div class="trabajo-item">
-        <img src="assets/images/trabajo2.jpg" alt="Trabajo 2" />
-        <p data-i18n="trabajo2_p1">Diseñamos un sistema de automatización con control de motores.</p>
-        <p data-i18n="trabajo2_p2">Los sensores industriales garantizaron una operación segura.</p>
-      </div>
-      <div class="trabajo-item">
-        <img src="assets/images/trabajo3.jpg" alt="Trabajo 3" />
-        <p data-i18n="trabajo3_p1">Realizamos mantenimiento predictivo con escaneo térmico.</p>
-        <p data-i18n="trabajo3_p2">Aumentamos el tiempo de actividad de la maquinaria crítica.</p>
-      </div>
-      <div class="trabajo-item">
-        <img src="assets/images/trabajo4.jpg" alt="Trabajo 4" />
-        <p data-i18n="trabajo4_p1">Instalamos un sistema de climatización industrial eficiente.</p>
-        <p data-i18n="trabajo4_p2">El sistema se ajusta automáticamente a la carga térmica.</p>
-      </div>
-      <div class="trabajo-item">
-        <video src="assets/videos/trabajo1.mp4" controls></video>
-        <p data-i18n="video1_p1">Este video muestra un sistema de bombeo inteligente.</p>
-        <p data-i18n="video1_p2">Perfecto para riego o distribución de agua industrial.</p>
-      </div>
-      <div class="trabajo-item">
-        <video src="assets/videos/trabajo2.mp4" controls></video>
-        <p data-i18n="video2_p1">Sistema de control de acceso con escáner biométrico.</p>
-        <p data-i18n="video2_p2">Adaptable y seguro para zonas restringidas industriales.</p>
-      </div>
+    <div class="form-group">
+      <label for="user_email" data-i18n="label_correo">CORREO:</label>
+      <input type="email" name="email" required />
     </div>
-  </section>
+    <div class="form-group">
+      <label for="mensaje" data-i18n="label_mensaje">MENSAJE:</label>
+      <textarea name="mensaje" required></textarea>
+    </div>
+    <button type="submit" class="btn-animado" data-i18n="btn_enviar">Enviar</button>
+  </form>
+  <div id="mensaje-exito" style="text-align:center; margin-top:15px; font-weight:bold; z-index:3; position:relative;"></div>
+</section>
 
-  <section id="equipos" data-aos="flip-left">
-    <h2 data-i18n="equipos_titulo">Tecnología</h2>
-    <p data-i18n="equipos_texto">Trabajamos con herramientas y tecnologías avanzadas para garantizar resultados eficientes.</p>
-  </section>
+<footer>
+  <p>© EMSINDUSTRIAL - <span data-i18n="footer_texto">Todos los derechos reservados</span></p>
+</footer>
 
-  <section id="contacto" data-aos="fade-left" class="contact-section">
-    <div class="overlay"></div>
-    <h2 data-i18n="contacto_titulo">Contáctanos</h2>
-    <form id="formulario">
-      <div class="form-group">
-        <label for="nombre" data-i18n="label_nombre">NOMBRE:</label>
-        <input type="text" name="nombre" required />
-      </div>
-      <div class="form-group">
-        <label for="user_email" data-i18n="label_correo">CORREO:</label>
-        <input type="email" name="email" required />
-      </div>
-      <div class="form-group">
-        <label for="mensaje" data-i18n="label_mensaje">MENSAJE:</label>
-        <textarea name="mensaje" required></textarea>
-      </div>
-      <button type="submit" class="btn-animado" data-i18n="btn_enviar">Enviar</button>
-    </form>
-    <div id="mensaje-exito" style="text-align:center; margin-top:15px; font-weight:bold; z-index:3; position:relative;"></div>
-  </section>
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>emailjs.init('BdsdjzCseTeNHFiUQ');</script>
+<script src="script.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init({ duration: 1000, once: true, offset: 150 });</script>
 
-  <footer>
-    <p>© EMSINDUSTRIAL - <span data-i18n="footer_texto">Todos los derechos reservados</span></p>
-  </footer>
-
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-  <script>emailjs.init('BdsdjzCseTeNHFiUQ');</script>
-  <script src="script.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init({ duration: 1000, once: true, offset: 150 });</script>
 </body>
 </html>
